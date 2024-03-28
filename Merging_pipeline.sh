@@ -9,9 +9,8 @@ vcf_dir=$1 # Comma separated list of directory in which are stored the imputed b
 outdir=$2
 logdir=${outdir}/Logs
 
-pipedir=$(dirname $0)
-
-scriptdir=/home/nardone/script/pipeline_merging/pipeline_scripts
+scriptdir="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+#scriptdir=/home/nardone/script/pipeline_merging/pipeline_scripts
 
 if [ ! -d ${logdir} ];then
         mkdir -m 777 -p ${logdir}
