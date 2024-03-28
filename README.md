@@ -18,3 +18,10 @@ VCF files must be named as `${chromosome}.vcf.gz`. e.g.: 22.vcf.gz
 
 Every step will be submitted by the wrapper script (Merging_pipeline.sh) as a job array. Each task of the array is a process that analyse each autosomal chromosome. The dependency system revolves around the -hold_jid flag of qsub. Doing so, step two will start after completion of the 22 tasks of step one, and the same will do step three with step two and so on.
 
+## Requirements
+
+- bcftools
+- QCtools
+- tabix
+- bgzip
+- gzip
